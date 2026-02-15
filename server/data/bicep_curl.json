@@ -1,0 +1,73 @@
+{
+    "id": "bicep_curl_dumbbell",
+    "movements": [
+        {
+            "name": "Bicep curl",
+            "sets": [
+                {
+                    "kind": "unit",
+                    "subsets": {
+                        "load": "20lbs",
+                        "reps": [
+                            {
+                                "left": 6,
+                                "right": 7
+                            },
+                            {
+                                "left": 2,
+                                "right": 2
+                            }
+                        ]
+                    }
+                },
+                {
+                    "kind": "unit",
+                    "subsets": {
+                        "load": "20lbs",
+                        "reps": [
+                            {
+                                "left": 5,
+                                "right": 5
+                            },
+                            {
+                                "left": 2,
+                                "right": 2
+                            }
+                        ]
+                    }
+                },
+                {
+                    "kind": "drop",
+                    "subsets": [
+                        {
+                            "load": "20lbs",
+                            "reps": [
+                                {
+                                    "left": 5,
+                                    "right": 5
+                                },
+                                {
+                                    "left": 1,
+                                    "right": 1
+                                }
+                            ]
+                        },
+                        {
+                            "load": "15lbs",
+                            "reps": [
+                                {
+                                    "left": 2,
+                                    "right": 2
+                                },
+                                {
+                                    "left": 1,
+                                    "right": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

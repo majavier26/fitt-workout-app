@@ -1,0 +1,44 @@
+{
+    "id": "chest_press_dumbbell_incline",
+    "movements": [
+        {
+            "name": "Inclined db. press",
+            "sets": [
+                {
+                    "kind": "drop",
+                    "subsets": [
+                        {
+                            "load": "20lbs",
+                            "reps": ["1F"],
+                            "remark": "Super pagod na ko omg"
+                        },
+                        {
+                            "load": "15lbs",
+                            "reps": [15]
+                        }
+                    ]
+                }, 
+                {
+                    "kind": "unit",
+                    "subsets": {
+                        "load": "15lbs",
+                        "reps": [10]
+                    }
+                },
+                {
+                    "kind": "drop",
+                    "subsets": [
+                        {
+                            "load": "15lbs",
+                            "reps": ["7F"]
+                        },
+                        {
+                            "load": "10lbs",
+                            "reps": [10]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

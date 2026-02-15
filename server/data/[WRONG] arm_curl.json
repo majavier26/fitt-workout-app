@@ -1,0 +1,52 @@
+{
+    "id": "forearm_curl_forearm_curl_reverse_set",
+    "name": ["Forearm curl", "Reverse forearm curl"],
+    "sets": [
+        [
+            {
+                "kind": "unit",
+                "sets": {
+                    "load": "15lbs",
+                    "reps": [15]
+                }
+            },
+            {
+                "kind": "unit",
+                "sets": {
+                    "load": "15lbs",
+                    "reps": [15]
+                }
+            },
+            {
+                "kind": "unit",
+                "sets": {
+                    "load": "15lbs",
+                    "reps": [15]
+                }
+            }
+        ],
+        [
+            {
+                "kind": "unit",
+                "sets": {
+                    "load": "10lbs",
+                    "reps": [10]
+                }
+            },
+            {
+                "kind": "unit",
+                "sets": {
+                    "load": "10lbs",
+                    "reps": [10]
+                }
+            },
+            {
+                "kind": "unit",
+                "sets": {
+                    "load": "10lbs",
+                    "reps": [10]
+                }
+            }
+        ]
+    ]
+}
