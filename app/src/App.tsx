@@ -1,5 +1,7 @@
 import { useDisclosure } from '@mantine/hooks';
 import { AppShell, Group, Burger, Text } from '@mantine/core';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 
 function App() {
   // State handler for navbar
@@ -11,7 +13,7 @@ function App() {
   return (
     <AppShell
       padding='md'
-      header={{ height: 60 }}
+      header={{ height: 30 }}
       navbar={{
         width: desktopOpened ? 240 : 50,
         breakpoint: 'sm',
@@ -21,7 +23,7 @@ function App() {
       }}
     >
       <AppShell.Header>
-        <Group h="100%" px="md">
+        <Group h="100%" px="xs">
           <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
           <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
           Fitt
@@ -31,7 +33,9 @@ function App() {
         Routes
       </AppShell.Navbar>
       <AppShell.Main>
-        <Text>Tite.</Text>
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
       </AppShell.Main>
     </AppShell>
   )
