@@ -1,4 +1,4 @@
-import type { ToplineCardProps } from '../../components/ui/ToplineCard';
+import type { ToplineCardProps, ComponentCardProps } from '../../../../assets/types/CardProps';
 
 // Topline cards
 export const homeToplineCards: ToplineCardProps[] = [
@@ -18,3 +18,14 @@ export const homeToplineCards: ToplineCardProps[] = [
         description: 'as of yesterday'
     },
 ];
+
+export const homeComponentCards: ComponentCardProps[] = [
+    {
+        title: 'Workout consistency',
+        children: 'Tite'
+    }, 
+    {
+        title: 'Weekly volume',
+        children: 'Tite'
+    }
+]
