@@ -1,11 +1,5 @@
-import { Box, Stack, Text, Title } from '@mantine/core';
-
-// Props for topline cards
-export type ToplineCardProps = {
-    title: string;
-    value: string | number;
-    description: string;
-}
+import { Card, Stack, Text, Title } from '@mantine/core';
+import type { ToplineCardProps } from '../../assets/types/CardProps';
 
 const ToplineCard = ({
     title,
@@ -13,13 +7,13 @@ const ToplineCard = ({
     description
 }: ToplineCardProps) => {
   return (
-    <Box>
+    <Card withBorder>
         <Stack>
             <Text>{title}</Text>
             <Title order={2}>{value}</Title>
             <Text size='xs'>{description}</Text>
         </Stack>
-    </Box>
+    </Card>
   )
 }
 
