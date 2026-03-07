@@ -1,7 +1,9 @@
 import { useDisclosure } from '@mantine/hooks';
-import { AppShell, Group, Burger, Text } from '@mantine/core';
-import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
+import { AppShell, Card } from '@mantine/core';
+import Navbar from './components/Navbar';
+import AppRoutes from './features/routes/components/AppRoutes';
+import { routes } from './features/routes/assets/config/routes';
+
 
 function App() {
   // State handler for navbar
@@ -12,30 +14,31 @@ function App() {
 
   return (
     <AppShell
-      padding='md'
-      header={{ height: 30 }}
+      padding={0}
+      layout='alt'
+      withBorder={false}
+      header={{ height: 20 }}
       navbar={{
-        width: desktopOpened ? 240 : 50,
+        width: desktopOpened ? 200 : 60,
         breakpoint: 'sm',
         collapsed: {
           mobile: !mobileOpened,
         }
       }}
     >
-      <AppShell.Header>
-        <Group h="100%" px="xs">
-          <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
-          <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
-          Fitt
-        </Group>
-      </AppShell.Header>
+      <AppShell.Header/>
       <AppShell.Navbar p='sm'>
-        Routes
+        <Navbar
+          mobileOpened={mobileOpened}
+          desktopOpened={desktopOpened}
+          toggleMobile={toggleMobile}
+          toggleDesktop={toggleDesktop}
+        />
       </AppShell.Navbar>
       <AppShell.Main>
-        <Routes>
-          <Route path='/' element={<Home />} />
-        </Routes>
+        <Card withBorder bg='#FFFFFF' p='md' h='100%'>
+          <AppRoutes routes={routes} />
+        </Card>
       </AppShell.Main>
     </AppShell>
   )
