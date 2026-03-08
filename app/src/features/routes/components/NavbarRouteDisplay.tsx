@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { UnstyledButton, Paper, Text, Group, useMantineTheme } from '@mantine/core';
+import { UnstyledButton, Paper, Text, useMantineTheme } from '@mantine/core';
 import { Icon } from '@iconify/react';
 import { FONT_WEIGHT } from '../../../assets/config/constants';
 import type { RouteType } from '../assets/config/routes';
-import transition from '../../../assets/styles/transition.module.css';
-import textStyles from '../../../assets/styles/text.module.css';
-
+import styles from '../assets/styles/NavbarRouteDisplay.module.css';
 
 // Helper type for navbar route display
 type NavbarRouteDisplayProps = RouteType & {
@@ -26,34 +24,34 @@ const NavbarRouteDisplay = (props: NavbarRouteDisplayProps) => {
       onMouseOver={() => setIsHovering(true)}
       onMouseOut={() => setIsHovering(false)}
       onClick={() => navigate(props.href)}
+      className={styles.button}
     >
         <Paper 
-          p='xs' 
+          p="xs" 
           bg={isHovering ? 'orange.4' : 'transparent'}
-          radius='md'
-          className={transition.all}
+          radius="md"
+          className={styles.paper}
+          style={{ width: props.isExpanded ? '100%' : '40px' }}
         >
-          <Group 
-            wrap='nowrap'
-            gap={props.isExpanded ? 'md' : 0}
-          >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', width: '200px' }}>
             <Icon 
               icon={props.icon} 
               color={isHovering ? 'white' : theme.colors.orange[4]} 
               height={20}
-              style={{ flexShrink: 0 }}               // To not resize the element 
+              width={20}
+              className={styles.icon}
             />
             <Text 
               c={isHovering ? 'white' : 'black'}
               fw={FONT_WEIGHT.Medium}
-              className={`${textStyles.textBase} ${props.isExpanded ? textStyles.textShown : textStyles.textHidden}`}
+              className={styles.text}
             >
               {props.title}
             </Text>
-          </Group>
+          </div>
         </Paper>
     </UnstyledButton>
   )
 }
 
-export default NavbarRouteDisplay
+export default NavbarRouteDisplay;
