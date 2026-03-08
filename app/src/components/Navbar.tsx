@@ -22,7 +22,7 @@ const Navbar = ({
             <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
         </Group>
 
-        <Stack gap="sm" px="xs"> 
+        <Stack gap={0} px="xs"> 
           {routes.map((route) => {
             return <NavbarRouteDisplay key={route.title} {...route} isExpanded={opened} />
           })}
