@@ -1,0 +1,19 @@
+.paper {
+  overflow: hidden;
+  transition: width 200ms ease, background-color 200ms ease;
+}
+
+.innerGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.text {
+  white-space: nowrap;
+}
